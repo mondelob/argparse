@@ -145,7 +145,7 @@ argparse::next_option(std::string arg) {
   if (rval != POSITIONAL_ARGUMENT && actopt == nullptr) {
     rval = UNKNOWN_ARGUMENT;
     if (sopt)
-      this->unknown = "-" + arg.at(1);
+      this->unknown = "-" + arg.substr(1, 1);
     else
       this->unknown = "--" + arg.substr(2);
   }
